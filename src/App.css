@@ -4,15 +4,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
-}
-
-header a {
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    margin: 0 10px;
 }
 
 header>.site-logo {
@@ -21,6 +14,16 @@ header>.site-logo {
 }
 
 /* DEFAULT STYLES ============================================ */
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+header>nav>a:hover {
+    text-decoration: underline;
+}
 
 h1 {
     font-weight: 700;
@@ -47,9 +50,9 @@ button {
     transition: all ease .3s;
 }
 
-button:hover{
+button:hover {
     transform: translate(0, -4px);
-    box-shadow: 0  2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .outline {
@@ -139,26 +142,22 @@ button.home-btn {
 }
 
 
-/* VAN PAGE ================================================*/
+/* VANS PAGE ================================================*/
 
 .van-container {
     padding: 1rem 2.5rem;
 }
 
+.van-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 4rem 1rem;
+}
+
 .van-container h2 {
     margin: 2rem 0;
     font-size: 2rem;
-}
-
-.van-card {
-    /* width: fit-content; */
-    /* border: 1px solid black; */
-    /* width: 200px;
-    height: 200px; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* padding: 5px; */
-    /* overflow: auto; */
 }
 
 .van-card-img {
@@ -177,18 +176,134 @@ button.home-btn {
     align-items: center;
 }
 
-.van-card-content h3 {
+
+.van-type {
+    height: 34px;
+    padding: 6px 26px;
+    font-style: normal;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFEAD0;
+    color: #4D4D4D;
+    transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.van-list {
+.van-type:hover {
+    color: #FFEAD0;
+}
+
+.van-type:focus {
+    outline: none;
+}
+
+.van-type.selected {
+    color: #FFEAD0;
+}
+
+.van-type.simple:hover,
+.van-type.simple.selected {
+    background-color: #E17654;
+}
+
+.van-type.rugged:hover,
+.van-type.rugged.selected {
+    background-color: #115E59;
+}
+
+.van-type.luxury:hover,
+.van-type.luxury.selected {
+    background-color: #161616;
+}
+
+/* VanDetail PAGE ================================================*/
+.van-detail-container {
+    /* padding: 3rem 1.5rem; */
+
+}
+
+.van-detail-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    gap: 1rem;
+    align-items: start;
+    gap: 2rem;
+    width: 80%;
+    margin: 3rem auto;
 }
-button.van-type{
-    margin: 0;
+
+.van-detail-container img {
+    border-radius: 5px;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
 }
-button.van-type:hover{
-    transform: none;
+
+.van-detail-img {
+    flex: 1;
+}
+
+.van-detail-content {
+    flex: 1;
+}
+
+.van-detail-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.van-detail-content p {
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+button.van-detail-btn {
+    width: 100%;
+    background-color: #FF8C38;
+
+}
+
+footer{
+    background-color: #252525;
+    color: #AAAAAA;
+    text-align: center;
+    padding: .7rem 0;
+    margin-top: 5rem;
+}
+a.developed-by{
+    font-weight: 700;
+    transition: all ease .3s;
+    color: #AAAAAA;
+    text-decoration: underline;
+}
+.developed-by:hover{
+    color: white;
+}
+
+
+/* RESPONSIVENESS ================================================*/
+
+@media(max-width:1300px) {
+    .van-detail-wrapper {
+        width: 90%;
+    }
+}
+
+@media(max-width:800px) {
+    .van-detail-wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .van-detail-img {
+        margin: 0 auto;
+    }
+    .van-detail-img img{
+        height: 80vh;
+    }
+    
+    .van-detail-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .van-detail-content p {
+        font-size: 1rem;
+    }
 }

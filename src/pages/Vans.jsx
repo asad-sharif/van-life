@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import '../server'
 
 export default function Vans() {
@@ -13,18 +14,23 @@ export default function Vans() {
 
     let vanCard = vans.map(van => (
         <div key={van.id} className="van-card">
-            <div className="van-card-img">
-                <img src={van.imageUrl} alt="" />
-            </div>
-            <div className="van-card-content">
-                <h3>{van.name}</h3>
-                <p><strong>${van.price}</strong> <small>/day</small></p>
-            </div>
-            <button className="van-type">
+
+            <Link to={`/vans/${van.id}`} >
+
+                <div className="van-card-img">
+                    <img src={van.imageUrl} alt="" />
+                </div>
+                <div className="van-card-content">
+                    <h3>{van.name}</h3>
+                    <p><strong>${van.price}</strong> <small>/day</small></p>
+                </div>
+
                 <i className={`van-type ${van.type} selected`}>{van.type}</i>
-            </button>
+            </Link>
 
         </div>
+
+
     ))
 
 
