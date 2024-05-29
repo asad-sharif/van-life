@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useParams,Link } from "react-router-dom"
 
 export default function VanDetail() {
     const [van, setVan] = React.useState([])
@@ -17,6 +17,13 @@ export default function VanDetail() {
 
     return (
         <div className="van-detail-container">
+            
+            <Link
+                to=".."
+                relative="path"
+                className="back-button"
+            >&larr; <span>Back to all vans</span></Link>
+
             <div className="van-detail-wrapper">
 
                 <div className="van-detail-img">
