@@ -40,6 +40,7 @@ export default function Footer() {
 
       </div>
 
+      
       <div className="footer-lower">
         <p>Website Developed by
           <Link to='https://github.com/asad-sharif/' className='developed-by'>
