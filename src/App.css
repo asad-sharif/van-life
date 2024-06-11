@@ -11,6 +11,7 @@ header {
 header>.site-logo {
     font-size: 1.5rem;
     font-weight: 900;
+    color: #FF8C38;
 }
 
 header a {
@@ -83,7 +84,7 @@ button:hover {
     background-size: cover;
     background-position: bottom;
     object-fit: contain;
-    height: 90vh;
+    height: 95vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -100,7 +101,7 @@ button:hover {
 }
 
 .home-banner-content h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .home-banner-content p {
@@ -115,6 +116,83 @@ button.home-btn {
     font-weight: 500;
     font-size: 1.2rem;
 }
+
+.home-features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.home-features-section h2 {
+    font-size: 3rem;
+}
+
+.home-features {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    gap: 2rem;
+}
+
+.home-feature-block {
+    flex: 1;
+}
+
+.home-feature-block p {
+    font-size: 1rem;
+}
+
+.home-vans-section {
+    /* border: 1px solid #FF8C38; */
+}
+
+.home-vans-first-block,
+.home-vans-second-block {
+    display: flex;
+}
+
+.home-vans-first-block-img,
+.home-vans-second-block-img {
+    flex: 1;
+    /* border: 1px solid black; */
+    height: 500px;
+}
+
+.home-vans-first-block-img img,
+.home-vans-second-block-img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+}
+
+.home-vans-first-block-content,
+.home-vans-second-block-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFCC8D;
+}
+
+.home-vans-first-block-content h2,
+.home-vans-second-block-content h2 {
+    font-size: 2.5rem;
+}
+
+.home-vans-first-block-content h2,
+.home-vans-first-block-content p,
+.home-vans-first-block-content button,
+.home-vans-second-block-content h2,
+.home-vans-second-block-content p,
+.home-vans-second-block-content button {
+    margin: 1rem 4rem;
+}
+
+
 
 /* ABOUT PAGE ================================================*/
 
@@ -132,19 +210,32 @@ button.home-btn {
 }
 
 .about-container-content {
-    width: 50%;
+    width: 60%;
     margin: 2.5rem auto;
 }
 
 .about-container-content h2 {
     font-size: 2.5rem;
+    text-align: center;
+    width: 80%;
+    margin: 3rem auto;
+}
+.about-container-content p{
+    font-size: 1rem;
+}
+
+.about-container-content-options{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 4rem;
+    margin: 3rem 0;
 }
 
 .about-container-highlight-box {
     background-color: #FFCC8D;
     border-radius: 5px;
     padding: 1.8rem 1.5rem;
-    width: 80%;
+    /* width: 80%; */
     margin: 4rem auto;
 }
 
@@ -387,11 +478,95 @@ button.van-detail-btn {
 /* FOOTER ================================================*/
 
 footer {
+    margin-top: 5rem;
+}
+
+.footer-upper {
+    background-color: #dedddd;
+    padding: 2rem 10rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.footer-upper-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #AAAAAA; */
+}
+
+.footer-upper-block:nth-child(1) {
+    flex: .6;
+}
+
+.footer-upper-block p,
+a {
+    font-size: .9rem;
+    font-weight: 350;
+    margin: .1rem 0;
+    line-height: 1.35;
+}
+
+.footer-upper-block a:hover {
+    color: #FF8C38;
+    text-decoration: underline;
+}
+
+.footer-upper-block input[type="email"] {
+    /* text-indent: .3rem; */
+    padding: .7rem 0;
+    text-indent: .5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: #FFF7ED;
+}
+
+.footer-upper-block input[type="submit"] {
+    padding: .7rem 0;
+    text-indent: .5rem;
+    outline: none;
+    border: 1px solid #FF8C38;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FF8C38;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.footer-upper-block input[type="submit"]:hover {
+    background-color: #FF8C38;
+    color: white;
+}
+form{
+    /* border: 1px solid #FF8C38; */
+    display: flex;
+    flex-direction: column;
+}
+
+button.footer-upper-block {
+    background-color: #dedddd;
+}
+
+.footer-upper-block h3 {
+    margin-bottom: .5rem;
+}
+
+
+.footer-lower {
     background-color: #252525;
     color: #AAAAAA;
     text-align: center;
-    padding: .7rem 0;
-    margin-top: 5rem;
+    padding: .4rem 0;
+}
+
+.footer-lower p {
+    font-size: 1rem;
 }
 
 a.developed-by {
