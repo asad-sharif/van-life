@@ -497,7 +497,7 @@ footer {
 }
 
 .footer-upper-block:nth-child(1) {
-    flex: .6;
+    flex: .5;
 }
 
 .footer-upper-block p,
