@@ -25,7 +25,6 @@ export default function App() {
           <Route path='vans' element={<Vans />}></Route>
           <Route path='vans/:id' element={<VanDetail />}></Route>
 
-
           <Route path='host' element={<HostLayout />}>
             <Route index element={<Dashboard />}></Route>
             <Route path='income' element={<Income />}></Route>
@@ -39,10 +38,10 @@ export default function App() {
               <Route path='hostVanPhotos' element={<HostVanPhotos />}></Route>
             </Route>
 
-
           </Route>
 
         </Route>
+        
       </Routes>
     </BrowserRouter>
   )

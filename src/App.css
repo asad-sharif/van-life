@@ -220,11 +220,12 @@ button.home-btn {
     width: 80%;
     margin: 3rem auto;
 }
-.about-container-content p{
+
+.about-container-content p {
     font-size: 1rem;
 }
 
-.about-container-content-options{
+.about-container-content-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 4rem;
@@ -543,7 +544,8 @@ a {
     background-color: #FF8C38;
     color: white;
 }
-form{
+
+form {
     /* border: 1px solid #FF8C38; */
     display: flex;
     flex-direction: column;
@@ -557,6 +559,28 @@ button.footer-upper-block {
     margin-bottom: .5rem;
 }
 
+.faq {
+    /* Your existing FAQ styles */
+  }
+  
+  .faq:hover {
+    cursor: pointer;
+    color: #FF8C38;
+  }
+  
+  .faq.open {
+    font-weight: bold;
+  }
+  
+  hr {
+    border-radius: 5px;
+    height: 1px;
+    background-color: darkgray;
+    outline: none;
+    border: none;
+    margin: .4rem 0;
+  }
+  
 
 .footer-lower {
     background-color: #252525;
